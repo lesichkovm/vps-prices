@@ -11,26 +11,21 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css">
   </head>
   <body>
-    <table data-toggle="table">
+    
+    <table
+      data-toggle="table"
+      data-url="data1.json"
+      data-pagination="true"
+      data-search="true">
       <thead>
         <tr>
-          <th>Item ID</th>
-          <th>Item Name</th>
-          <th>Item Price</th>
+          <th data-sortable="true" data-field="provider">Provider</th>
+          <th data-field="price">Price ($)</th>
+          <th data-field="disk">Disk (GB)</th>
+          <th data-field="cores">Cores</th>
+          <th data-field="cpus">CPU</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Item 1</td>
-          <td>$1</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Item 2</td>
-          <td>$2</td>
-        </tr>
-      </tbody>
     </table>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
