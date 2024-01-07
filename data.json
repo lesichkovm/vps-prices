@@ -1,7 +1,7 @@
 [
   {
     "provider": "AWS Lightsail",
-    "price": "$3.50"
+    "price": "3.50",
     "memory": "0.5",
     "cpu": "2",
     "disk": "20"
