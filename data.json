@@ -1,51 +1,51 @@
 [
   {
     "provider": "AWS Lightsail",
-    "price": "$3.50",
-    "cpu": "2",
+    "price": "$3.50"
     "memory": "0.5",
+    "cpu": "2",
     "disk": "20"
   },
   {
     "provider": "AWS Lightsail",
     "price": "5.00",
-    "cpu": "2",
-    "memory": "0.5",
-    "disk": "20"
-  },
-  {
-    "provider": "AWS Lightsail",
-    "price": "10.00",
-    "cpu": "2",
     "memory": "1",
+    "cpu": "2",
     "disk": "40"
   },
   {
     "provider": "AWS Lightsail",
-    "price": "20.00",
-    "cpu": "2",
+    "price": "10.00",
     "memory": "2",
+    "cpu": "2",
     "disk": "60"
   },
   {
     "provider": "AWS Lightsail",
-    "price": "40.00",
-    "cpu": "2",
+    "price": "20.00",
     "memory": "4",
+    "cpu": "2",
     "disk": "80"
   },
   {
     "provider": "AWS Lightsail",
     "price": "40.00",
+    "memory": "8",
     "cpu": "2",
-    "memory": "2",
-    "disk": "60"
+    "disk": "160"
+  },
+  {
+    "provider": "AWS Lightsail",
+    "price": "80.00",
+    "memory": "16",
+    "cpu": "4",
+    "disk": "320"
   },
   {
     "provider": "AWS Lightsail",
     "price": "160.00",
-    "cpu": "4",
+    "cpu": "8",
     "memory": "32",
-    "disk": "320"
+    "disk": "640"
   }
 ]
