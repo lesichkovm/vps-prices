@@ -30,7 +30,7 @@
   {
     "provider": "AWS Lightsail",
     "price": "40.00",
-    "cpu": "2"
+    "cpu": "2",
     "memory": "4",
     "disk": "80"
   },
@@ -47,5 +47,5 @@
     "cpu": "4",
     "memory": "32",
     "disk": "320"
-  },
+  }
 ]
