@@ -3,8 +3,8 @@
     "provider": "Scaleway",
     "memory": "1",
     "cpu": "1",
-    "disk": "10",
-    "price": "0.43",
+    "disk": "20",
+    "price": "4.99",
     "updated_at": "2026-08-16"
   },
   {
