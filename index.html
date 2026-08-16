@@ -11,40 +11,60 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css">
   </head>
   <body>
+    <div class="container my-4">
+      <h1 class="mb-4 text-center">VPS Prices</h1>
 
-    <h1>VPS Prices</h1>
-    
-    <table
-      data-toggle="table"
-      data-url="data.json"
-      data-pagination="true"
-      data-search="true">
-      <thead>
-        <tr>
-          <th data-field="provider" data-sortable="true">
-            Provider
-          </th>
-          <th data-field="memory" data-sortable="true">
-            Memory (GB)
-          </th>
-          <th data-field="cpu" data-sortable="true">
-            CPUs
-          </th>
-          <th data-field="disk" data-sortable="true">
-            Disk (GB)
-          </th>
-          <th data-field="price" data-sortable="true">
-            Price ($)
-          </th>
-          <th data-field="updated_at" data-sortable="true">
-            Date Checked
-          </th>
-        </tr>
-      </thead>
-    </table>
+      <table
+        id="vps-table"
+        data-toggle="table"
+        data-url="data.json"
+        data-pagination="true"
+        data-page-size="25"
+        data-page-list="[10, 25, 50, 100, All]"
+        data-search="true"
+        data-show-columns="true"
+        data-sortable="true"
+        data-sort-name="price"
+        data-sort-order="asc"
+        class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th data-field="provider" data-sortable="true">
+              Provider
+            </th>
+            <th data-field="memory" data-sortable="true" data-sorter="numberSorter">
+              Memory (GB)
+            </th>
+            <th data-field="cpu" data-sortable="true" data-sorter="numberSorter">
+              CPUs
+            </th>
+            <th data-field="disk" data-sortable="true" data-sorter="numberSorter">
+              Disk (GB)
+            </th>
+            <th data-field="price" data-sortable="true" data-sorter="numberSorter">
+              Price ($)
+            </th>
+            <th data-field="updated_at" data-sortable="true">
+              Date Checked
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script>
+    <script>
+      function numberSorter(a, b) {
+        var aa = parseFloat(a);
+        var bb = parseFloat(b);
+        if (isNaN(aa)) aa = 0;
+        if (isNaN(bb)) bb = 0;
+        if (aa < bb) return -1;
+        if (aa > bb) return 1;
+        return 0;
+      }
+    </script>
   </body>
 </html>
