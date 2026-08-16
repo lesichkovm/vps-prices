@@ -14,7 +14,10 @@ Choosing a VPS can be overwhelming due to varying specs, tier structures, and pr
 
 ### Currency Standardization
 
-To allow a fair, apples-to-apples comparison across all providers, all prices originally quoted in Euros (EUR) have been converted to US Dollars (USD). The conversion uses the current exchange rate of **1 EUR = 1.16 USD**.
+To allow a fair, apples-to-apples comparison across all providers, all prices originally quoted in Euros (EUR) or British Pounds (GBP) are converted to US Dollars (USD). The exchange rates used are:
+
+- **1 EUR = 1.16 USD**
+- **1 GBP = 1.37 USD**
 
 ## Researched Providers
 
@@ -24,6 +27,7 @@ Below is the list of VPS hosting providers included in our comparison along with
 - [CloudFanatic](https://cloudfanatic.net/)
 - [Contabo](https://contabo.com/)
 - [DigitalOcean](https://www.digitalocean.com/)
+- [eVPS](https://www.evps.net/packages)
 - [Hetzner](https://www.hetzner.com/)
 - [Linode (Akamai)](https://www.linode.com/)
 - [OVHcloud](https://www.ovhcloud.com/)
