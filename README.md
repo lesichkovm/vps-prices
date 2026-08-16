@@ -12,6 +12,10 @@ The primary goal of this repository is to collect, normalize, and present up-to-
 
 Choosing a VPS can be overwhelming due to varying specs, tier structures, and pricing models. This project provides a centralized, searchable, and filterable table allowing developers, sysadmins, and organizations to quickly identify the best VPS plan for their workload and budget.
 
+### Currency Standardization
+
+To allow a fair, apples-to-apples comparison across all providers, all prices originally quoted in Euros (EUR) have been converted to US Dollars (USD). The conversion uses the current exchange rate of **1 EUR = 1.16 USD**.
+
 ## Researched Providers
 
 Below is the list of VPS hosting providers included in our comparison along with links to their official websites:
