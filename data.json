@@ -1,11 +1,11 @@
 [
   {
     "provider": "Scaleway",
-    "price": "2.27",
+    "price": "",
     "memory": "1",
     "cpu": "1",
     "disk": "10",
-    "updated_at": "2019-12-13"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Vultr (IPv6)",
@@ -13,7 +13,7 @@
     "memory": "0.5",
     "cpu": "1",
     "disk": "10",
-    "updated_at": "2024-01-06"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "CloudFanatic",
@@ -21,31 +21,31 @@
     "memory": "1",
     "cpu": "1",
     "disk": "30",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Scaleway",
-    "price": "3.34",
+    "price": "",
     "memory": "2",
     "cpu": "2",
     "disk": "50",
-    "updated_at": "2019-12-13"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "OVH",
-    "price": "3.35",
+    "price": "",
     "memory": "2",
     "cpu": "1",
     "disk": "20",
-    "updated_at": "2019-12-13"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "AWS Lightsail",
-    "price": "3.50",
+    "price": "5.00",
     "memory": "0.5",
     "cpu": "1",
     "disk": "20",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Vultr",
@@ -53,7 +53,7 @@
     "memory": "0.5",
     "cpu": "1",
     "disk": "10",
-    "updated_at": "2024-01-06"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "DigitalOcean",
@@ -61,7 +61,7 @@
     "memory": "0.5",
     "cpu": "1",
     "disk": "10",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "CloudFanatic",
@@ -69,23 +69,23 @@
     "memory": "2",
     "cpu": "2",
     "disk": "60",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Hetzner",
-    "price": "4.81",
+    "price": "",
     "memory": "2",
     "cpu": "1",
     "disk": "20",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "AWS Lightsail",
-    "price": "5.00",
+    "price": "7.00",
     "memory": "1",
     "cpu": "1",
     "disk": "40",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Vultr",
@@ -93,7 +93,7 @@
     "memory": "1",
     "cpu": "1",
     "disk": "25",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Linode",
@@ -101,15 +101,15 @@
     "memory": "1",
     "cpu": "1",
     "disk": "25",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Hetzner",
-    "price": "5.53",
+    "price": "",
     "memory": "2",
     "cpu": "2",
     "disk": "40",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "DigitalOcean",
@@ -117,23 +117,23 @@
     "memory": "1",
     "cpu": "1",
     "disk": "25",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Hetzner",
-    "price": "6.79",
+    "price": "9.99",
     "memory": "4",
     "cpu": "2",
     "disk": "40",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "OVH",
-    "price": "6.87",
+    "price": "",
     "memory": "4",
     "cpu": "1",
     "disk": "40",
-    "updated_at": "2019-12-13"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "CloudFanatic",
@@ -141,31 +141,31 @@
     "memory": "4",
     "cpu": "4",
     "disk": "100",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Scaleway",
-    "price": "9.06",
+    "price": "",
     "memory": "2",
     "cpu": "2",
     "disk": "20",
-    "updated_at": "2021-01-24"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Hetzner",
-    "price": "9.58",
+    "price": "",
     "memory": "4",
     "cpu": "3",
     "disk": "80",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "AWS Lightsail",
-    "price": "10.00",
+    "price": "12.00",
     "memory": "2",
     "cpu": "1",
     "disk": "60",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "DigitalOcean",
@@ -173,7 +173,7 @@
     "memory": "2",
     "cpu": "1",
     "disk": "50",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "DigitalOcean",
@@ -181,7 +181,7 @@
     "memory": "2",
     "cpu": "2",
     "disk": "60",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Vultr",
@@ -189,39 +189,39 @@
     "memory": "2",
     "cpu": "1",
     "disk": "55",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Linode",
-    "price": "10.00",
+    "price": "12.00",
     "memory": "2",
     "cpu": "1",
     "disk": "50",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Hetzner",
-    "price": "12.31",
+    "price": "18.49",
     "memory": "8",
     "cpu": "2",
     "disk": "80",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Hetzner",
-    "price": "17.26",
+    "price": "41.99",
     "memory": "8",
     "cpu": "4",
     "disk": "160",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "OVH",
-    "price": "13.87",
+    "price": "",
     "memory": "8",
     "cpu": "2",
     "disk": "80",
-    "updated_at": "2019-12-13"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "CloudFanatic",
@@ -229,23 +229,23 @@
     "memory": "8",
     "cpu": "4",
     "disk": "200",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Scaleway",
-    "price": "18.11",
+    "price": "",
     "memory": "4",
     "cpu": "3",
     "disk": "40",
-    "updated_at": "2021-01-24"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "AWS Lightsail",
-    "price": "20.00",
+    "price": "24.00",
     "memory": "4",
     "cpu": "2",
     "disk": "80",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "DigitalOcean",
@@ -253,7 +253,7 @@
     "memory": "4",
     "cpu": "2",
     "disk": "80",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Vultr",
@@ -261,23 +261,23 @@
     "memory": "4",
     "cpu": "2",
     "disk": "80",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Linode",
-    "price": "20.00",
+    "price": "24.00",
     "memory": "4",
     "cpu": "2",
     "disk": "80",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Hetzner",
-    "price": "22.09",
+    "price": "34.99",
     "memory": "16",
     "cpu": "4",
     "disk": "160",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "CloudFanatic",
@@ -285,23 +285,23 @@
     "memory": "12",
     "cpu": "8",
     "disk": "400",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Hetzner",
-    "price": "31.99",
+    "price": "",
     "memory": "8",
     "cpu": "2",
     "disk": "240",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "AWS Lightsail",
-    "price": "40.00",
+    "price": "44.00",
     "memory": "8",
     "cpu": "2",
     "disk": "160",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "DigitalOcean",
@@ -309,7 +309,7 @@
     "memory": "8",
     "cpu": "4",
     "disk": "160",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Vultr",
@@ -317,39 +317,39 @@
     "memory": "8",
     "cpu": "4",
     "disk": "160",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Linode",
-    "price": "40.00",
+    "price": "48.00",
     "memory": "8",
     "cpu": "4",
     "disk": "160",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Hetzner",
-    "price": "41.76",
+    "price": "",
     "memory": "32",
     "cpu": "8",
     "disk": "240",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Hetzner",
-    "price": "69.69",
+    "price": "118.99",
     "memory": "32",
     "cpu": "16",
     "disk": "360",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "AWS Lightsail",
-    "price": "80.00",
+    "price": "84.00",
     "memory": "16",
     "cpu": "4",
     "disk": "320",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "DigitalOcean",
@@ -357,7 +357,7 @@
     "memory": "16",
     "cpu": "8",
     "disk": "320",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Vultr",
@@ -365,39 +365,39 @@
     "memory": "16",
     "cpu": "6",
     "disk": "320",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Linode",
-    "price": "80.00",
+    "price": "96.00",
     "memory": "16",
     "cpu": "6",
     "disk": "320",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Hetzner",
-    "price": "83.88",
+    "price": "",
     "memory": "32",
     "cpu": "8",
     "disk": "240",
-    "updated_at": "2021-01-24"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "AWS Lightsail",
-    "price": "160.00",
+    "price": "164.00",
     "memory": "32",
     "cpu": "8",
     "disk": "640",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "DigitalOcean",
-    "price": "160.00",
+    "price": "",
     "memory": "16",
     "cpu": "8",
     "disk": "100",
-    "updated_at": "2021-01-24"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Vultr",
@@ -405,30 +405,30 @@
     "memory": "32",
     "cpu": "8",
     "disk": "640",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Linode",
-    "price": "160.00",
+    "price": "192.00",
     "memory": "32",
     "cpu": "8",
     "disk": "640",
-    "updated_at": "2022-12-29"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Hetzner",
-    "price": "167.88",
+    "price": "",
     "memory": "64",
     "cpu": "16",
     "disk": "320",
-    "updated_at": "2021-01-24"
+    "updated_at": "2026-08-16"
   },
   {
     "provider": "Hetzner",
-    "price": "323.88",
+    "price": "",
     "memory": "128",
     "cpu": "32",
     "disk": "600",
-    "updated_at": "2021-01-24"
+    "updated_at": "2026-08-16"
   }
 ]
