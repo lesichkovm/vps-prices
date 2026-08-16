@@ -80,6 +80,14 @@
     "updated_at": "2026-08-16"
   },
   {
+    "provider": "Contabo",
+    "memory": "8",
+    "cpu": "4",
+    "disk": "50",
+    "price": "5.99",
+    "updated_at": "2026-08-16"
+  },
+  {
     "provider": "DigitalOcean",
     "memory": "1",
     "cpu": "1",
@@ -109,6 +117,14 @@
     "cpu": "2",
     "disk": "40",
     "price": "7.00",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "2",
+    "cpu": "2",
+    "disk": "40",
+    "price": "8.49",
     "updated_at": "2026-08-16"
   },
   {
@@ -152,6 +168,14 @@
     "updated_at": "2026-08-16"
   },
   {
+    "provider": "Contabo",
+    "memory": "16",
+    "cpu": "6",
+    "disk": "100",
+    "price": "10.49",
+    "updated_at": "2026-08-16"
+  },
+  {
     "provider": "DigitalOcean",
     "memory": "2",
     "cpu": "1",
@@ -184,6 +208,14 @@
     "updated_at": "2026-08-16"
   },
   {
+    "provider": "Raff Technologies",
+    "memory": "4",
+    "cpu": "2",
+    "disk": "80",
+    "price": "13.99",
+    "updated_at": "2026-08-16"
+  },
+  {
     "provider": "Scaleway",
     "memory": "4",
     "cpu": "3",
@@ -197,6 +229,22 @@
     "cpu": "2",
     "disk": "65",
     "price": "15.00",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "4",
+    "cpu": "4",
+    "disk": "80",
+    "price": "16.99",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "Contabo",
+    "memory": "30",
+    "cpu": "8",
+    "disk": "200",
+    "price": "17.49",
     "updated_at": "2026-08-16"
   },
   {
@@ -280,11 +328,27 @@
     "updated_at": "2026-08-16"
   },
   {
+    "provider": "Raff Technologies",
+    "memory": "8",
+    "cpu": "2",
+    "disk": "160",
+    "price": "27.99",
+    "updated_at": "2026-08-16"
+  },
+  {
     "provider": "CloudFanatic",
     "memory": "12",
     "cpu": "8",
     "disk": "400",
     "price": "29.00",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "8",
+    "cpu": "4",
+    "disk": "160",
+    "price": "30.99",
     "updated_at": "2026-08-16"
   },
   {
@@ -296,11 +360,27 @@
     "updated_at": "2026-08-16"
   },
   {
+    "provider": "Contabo",
+    "memory": "60",
+    "cpu": "10",
+    "disk": "400",
+    "price": "31.49",
+    "updated_at": "2026-08-16"
+  },
+  {
     "provider": "Hetzner",
     "memory": "16",
     "cpu": "4",
     "disk": "160",
     "price": "34.99",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "8",
+    "cpu": "8",
+    "disk": "160",
+    "price": "37.99",
     "updated_at": "2026-08-16"
   },
   {
@@ -360,6 +440,30 @@
     "updated_at": "2026-08-16"
   },
   {
+    "provider": "Raff Technologies",
+    "memory": "16",
+    "cpu": "4",
+    "disk": "320",
+    "price": "52.99",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "16",
+    "cpu": "8",
+    "disk": "320",
+    "price": "59.99",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "16",
+    "cpu": "16",
+    "disk": "320",
+    "price": "75.99",
+    "updated_at": "2026-08-16"
+  },
+  {
     "provider": "CloudFanatic",
     "memory": "32",
     "cpu": "16",
@@ -392,6 +496,14 @@
     "updated_at": "2026-08-16"
   },
   {
+    "provider": "Raff Technologies",
+    "memory": "24",
+    "cpu": "12",
+    "disk": "480",
+    "price": "90.99",
+    "updated_at": "2026-08-16"
+  },
+  {
     "provider": "DigitalOcean",
     "memory": "16",
     "cpu": "8",
@@ -408,11 +520,27 @@
     "updated_at": "2026-08-16"
   },
   {
+    "provider": "Raff Technologies",
+    "memory": "32",
+    "cpu": "8",
+    "disk": "640",
+    "price": "115.99",
+    "updated_at": "2026-08-16"
+  },
+  {
     "provider": "Hetzner",
     "memory": "32",
     "cpu": "16",
     "disk": "360",
     "price": "118.99",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "32",
+    "cpu": "16",
+    "disk": "640",
+    "price": "129.99",
     "updated_at": "2026-08-16"
   },
   {
