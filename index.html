@@ -11,40 +11,134 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css">
   </head>
   <body>
+    <div class="container my-4">
+      <h1 class="mb-4 text-center">VPS Prices</h1>
 
-    <h1>VPS Prices</h1>
-    
-    <table
-      data-toggle="table"
-      data-url="data.json"
-      data-pagination="true"
-      data-search="true">
-      <thead>
-        <tr>
-          <th data-field="provider" data-sortable="true">
-            Provider
-          </th>
-          <th data-field="memory" data-sortable="true">
-            Memory (GB)
-          </th>
-          <th data-field="cpu" data-sortable="true">
-            CPUs
-          </th>
-          <th data-field="disk" data-sortable="true">
-            Disk (GB)
-          </th>
-          <th data-field="price" data-sortable="true">
-            Price ($)
-          </th>
-          <th data-field="updated_at" data-sortable="true">
-            Date Checked
-          </th>
-        </tr>
-      </thead>
-    </table>
+      <div id="toolbar" class="d-flex align-items-center mb-2">
+        <label for="price-range" class="me-2 fw-bold">Price Range:</label>
+        <select id="price-range" class="form-select w-auto">
+          <option value="all">All Tiers</option>
+          <option value="tier1">$4.99/mo or less</option>
+          <option value="tier2">$5.00/mo - $9.99/mo</option>
+          <option value="tier3">$10.00/mo - $19.99/mo</option>
+          <option value="tier4">$20.00/mo - $39.99/mo</option>
+          <option value="tier5">$40.00/mo - $79.99/mo</option>
+          <option value="tier6">$80.00/mo - $159.99/mo</option>
+          <option value="tier7">$160.00/mo and above</option>
+        </select>
+      </div>
+
+      <table
+        id="vps-table"
+        data-toggle="table"
+        data-url="data.json"
+        data-toolbar="#toolbar"
+        data-pagination="true"
+        data-page-size="25"
+        data-page-list="[10, 25, 50, 100, All]"
+        data-search="true"
+        data-show-columns="true"
+        data-sortable="true"
+        data-sort-name="price"
+        data-sort-order="asc"
+        data-custom-search="priceRangeCustomSearch"
+        class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th data-field="provider" data-sortable="true">
+              Provider
+            </th>
+            <th data-field="memory" data-sortable="true" data-sorter="numberSorter">
+              Memory (GB)
+            </th>
+            <th data-field="cpu" data-sortable="true" data-sorter="numberSorter">
+              CPUs
+            </th>
+            <th data-field="disk" data-sortable="true" data-sorter="numberSorter">
+              Disk (GB)
+            </th>
+            <th data-field="price" data-sortable="true" data-sorter="numberSorter">
+              Price ($)
+            </th>
+            <th data-field="updated_at" data-sortable="true">
+              Date Checked
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script>
+    <script>
+      function numberSorter(a, b) {
+        var aa = parseFloat(a);
+        var bb = parseFloat(b);
+        if (isNaN(aa)) aa = 0;
+        if (isNaN(bb)) bb = 0;
+        if (aa < bb) return -1;
+        if (aa > bb) return 1;
+        return 0;
+      }
+
+      function matchesPriceRange(priceVal, tier) {
+        var p = parseFloat(priceVal);
+        if (isNaN(p)) return false;
+
+        switch (tier) {
+          case 'tier1':
+            return p <= 4.99;
+          case 'tier2':
+            return p >= 5.00 && p <= 9.99;
+          case 'tier3':
+            return p >= 10.00 && p <= 19.99;
+          case 'tier4':
+            return p >= 20.00 && p <= 39.99;
+          case 'tier5':
+            return p >= 40.00 && p <= 79.99;
+          case 'tier6':
+            return p >= 80.00 && p <= 159.99;
+          case 'tier7':
+            return p >= 160.00;
+          default:
+            return true;
+        }
+      }
+
+      function priceRangeCustomSearch(data, text) {
+        var selectedTier = $('#price-range').val();
+        var searchText = text ? text.toLowerCase().trim() : '';
+
+        return data.filter(function (row) {
+          // Check price tier match
+          if (!matchesPriceRange(row.price, selectedTier)) {
+            return false;
+          }
+
+          // Check text search match
+          if (searchText) {
+            var rowText = [
+              row.provider,
+              row.memory,
+              row.cpu,
+              row.disk,
+              row.price,
+              row.updated_at
+            ].join(' ').toLowerCase();
+
+            return rowText.indexOf(searchText) !== -1;
+          }
+
+          return true;
+        });
+      }
+
+      $(function () {
+        $('#price-range').on('change', function () {
+          $('#vps-table').bootstrapTable('refreshOptions', {});
+        });
+      });
+    </script>
   </body>
 </html>
