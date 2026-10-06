@@ -1,0 +1,36 @@
+{
+  "server_types": [
+    {
+      "id": 1,
+      "name": "cx23",
+      "cores": 1,
+      "memory": 2.0,
+      "disk": 20.0,
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_monthly": {
+            "net": "5.4900000000",
+            "gross": "6.5331000000"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "cx33",
+      "cores": 2,
+      "memory": 4.0,
+      "disk": 40.0,
+      "prices": [
+        {
+          "location": "fsn1",
+          "price_monthly": {
+            "net": "8.4900000000",
+            "gross": "10.1031000000"
+          }
+        }
+      ]
+    }
+  ]
+}

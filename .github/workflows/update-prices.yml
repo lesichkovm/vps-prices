@@ -1,0 +1,67 @@
+name: Update VPS Prices
+
+on:
+  schedule:
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+    inputs:
+      provider:
+        description: 'Specific provider to update (optional)'
+        required: false
+        type: string
+
+concurrency:
+  group: update-prices
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-prices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: 'go.mod'
+
+      - name: Run Go Vet
+        run: go vet ./...
+
+      - name: Run Tests
+        run: go test ./...
+
+      - name: Fetch and Update VPS Prices
+        env:
+          HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
+          DIGITALOCEAN_TOKEN: ${{ secrets.DIGITALOCEAN_TOKEN }}
+        run: |
+          PROVIDER_ARG=""
+          if [ -n "${{ inputs.provider }}" ]; then
+            PROVIDER_ARG="--provider ${{ inputs.provider }}"
+          fi
+          go run ./cmd/vpsprices update --report report.md $PROVIDER_ARG
+
+      - name: Validate data.json
+        run: go run ./cmd/vpsprices validate
+
+      - name: Get current date
+        id: date
+        run: echo "date=$(date -u +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Create or Update Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: update VPS prices"
+          branch: "automation/price-update"
+          delete-branch: true
+          title: "chore: update VPS prices (${{ steps.date.outputs.date }})"
+          body-path: "report.md"
+          labels: "automated-pr, vps-prices"
