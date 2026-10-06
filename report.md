@@ -11,14 +11,14 @@
 | Contabo | manual | ✋ manual | 0 | Requires manual review (Cloudflare anti-bot / no public API) |
 | DigitalOcean | token API | ⚠️ skipped | 0 | Skipped: DIGITALOCEAN_TOKEN secret not provided |
 | Hetzner | token API | ⚠️ skipped | 0 | Skipped: HCLOUD_TOKEN secret not provided |
-| Linode | API | ✅ ok | 10 | Fetched successfully |
 | AWS Lightsail | bulk file | ✅ ok | 8 | Fetched successfully |
+| Linode | API | ✅ ok | 10 | Fetched successfully |
 | OVH | API | ✅ ok | 4 | Fetched successfully |
 | CloudFanatic | HTML | ✅ ok | 8 | Fetched successfully |
 | Raff Technologies | HTML | ✅ ok | 12 | Fetched successfully |
 | Vultr | API | ✅ ok | 11 | Fetched successfully |
-| eVPS | HTML | ✅ ok | 8 | Fetched successfully |
 | Scaleway | API | ✅ ok | 6 | Fetched successfully |
+| eVPS | HTML | ✅ ok | 8 | Fetched successfully |
 
 ## Changes Summary
 
