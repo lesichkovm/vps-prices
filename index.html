@@ -114,6 +114,15 @@
             </div>
 
             <div class="d-flex align-items-center">
+              <label for="currency-select" class="me-2 fw-bold text-nowrap"><i class="bi bi-currency-exchange me-1"></i>Currency:</label>
+              <select id="currency-select" class="form-select w-auto">
+                <option value="usd">USD ($)</option>
+                <option value="eur">EUR (€)</option>
+                <option value="gbp">GBP (£)</option>
+              </select>
+            </div>
+
+            <div class="d-flex align-items-center">
               <label for="mode-select" class="me-2 fw-bold text-nowrap"><i class="bi bi-circle-half me-1"></i>Mode:</label>
               <select id="mode-select" class="form-select w-auto">
                 <option value="light">Light</option>
@@ -1202,6 +1211,12 @@
         gbp: 1.32
       };
 
+      var CURRENCY_SYMBOLS = {
+        usd: '$',
+        eur: '€',
+        gbp: '£'
+      };
+
       function populateProviderFilter(res) {
         var providers = {};
         res.forEach(function (row) {
@@ -1221,13 +1236,17 @@
 
       function responseHandler(res) {
         populateProviderFilter(res);
+        var targetCurrency = ($('#currency-select').val() || 'usd').toLowerCase();
+        var targetRate = EXCHANGE_RATES[targetCurrency] || 1.0;
+
         return res.map(function (row) {
-          var currency = (row.currency || 'usd').toLowerCase();
-          var rate = EXCHANGE_RATES[currency] || 1.0;
+          var origCurrency = (row.currency || 'usd').toLowerCase();
+          var origRateToUSD = EXCHANGE_RATES[origCurrency] || 1.0;
           var originalPrice = parseFloat(row.price);
 
           if (!isNaN(originalPrice)) {
-            var converted = originalPrice * rate;
+            var usdPrice = originalPrice * origRateToUSD;
+            var converted = usdPrice / targetRate;
             row.price = (Math.round(converted * 100) / 100).toFixed(2);
           }
           return row;
@@ -1239,7 +1258,9 @@
         var strVal = value.toString().replace(/[^0-9.-]/g, '');
         var num = parseFloat(strVal);
         if (isNaN(num)) return value;
-        return '$' + num.toFixed(2);
+        var targetCurrency = ($('#currency-select').val() || 'usd').toLowerCase();
+        var symbol = CURRENCY_SYMBOLS[targetCurrency] || '$';
+        return symbol + num.toFixed(2);
       }
 
       function numberSorter(a, b) {
@@ -1328,9 +1349,11 @@
       $(function () {
         var savedTheme = localStorage.getItem('bootlegance_theme') || 'default';
         var savedMode = localStorage.getItem('bootlegance_mode') || 'light';
+        var savedCurrency = localStorage.getItem('vps_currency') || 'usd';
 
         $('#theme-select').val(savedTheme);
         $('#mode-select').val(savedMode);
+        $('#currency-select').val(savedCurrency);
 
         applyTheme(savedTheme);
         applyMode(savedMode);
@@ -1345,6 +1368,12 @@
           var mode = $(this).val();
           localStorage.setItem('bootlegance_mode', mode);
           applyMode(mode);
+        });
+
+        $('#currency-select').on('change', function () {
+          var currency = $(this).val();
+          localStorage.setItem('vps_currency', currency);
+          $('#vps-table').bootstrapTable('refreshOptions', {});
         });
 
         $('#price-range, #provider-filter').on('change', function () {
