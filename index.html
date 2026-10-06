@@ -26,6 +26,26 @@
     <link id="bootlegance-theme" rel="stylesheet" href="">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css">
+    <style>
+      .form-select {
+        padding-right: 2.5rem !important;
+      }
+      #currency-select {
+        min-width: 125px;
+      }
+      #mode-select {
+        min-width: 105px;
+      }
+      #theme-select {
+        min-width: 220px;
+      }
+      #provider-filter {
+        min-width: 180px;
+      }
+      #price-range {
+        min-width: 220px;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm mb-4 border-bottom">
@@ -39,6 +59,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
           <div class="ms-auto d-flex flex-wrap align-items-center gap-3 mt-2 mt-lg-0">
+            <div class="d-flex align-items-center">
+              <label for="currency-select" class="me-2 fw-bold text-nowrap"><i class="bi bi-currency-exchange me-1"></i>Currency:</label>
+              <select id="currency-select" class="form-select w-auto">
+                <option value="usd">USD ($)</option>
+                <option value="eur">EUR (€)</option>
+                <option value="gbp">GBP (£)</option>
+              </select>
+            </div>
+
             <div class="d-flex align-items-center">
               <label for="theme-select" class="me-2 fw-bold text-nowrap"><i class="bi bi-palette me-1"></i>Theme:</label>
               <select id="theme-select" class="form-select w-auto">
@@ -114,20 +143,13 @@
             </div>
 
             <div class="d-flex align-items-center">
-              <label for="currency-select" class="me-2 fw-bold text-nowrap"><i class="bi bi-currency-exchange me-1"></i>Currency:</label>
-              <select id="currency-select" class="form-select w-auto">
-                <option value="usd">USD ($)</option>
-                <option value="eur">EUR (€)</option>
-                <option value="gbp">GBP (£)</option>
-              </select>
-            </div>
-
-            <div class="d-flex align-items-center">
-              <label for="mode-select" class="me-2 fw-bold text-nowrap"><i class="bi bi-circle-half me-1"></i>Mode:</label>
-              <select id="mode-select" class="form-select w-auto">
+              <select id="mode-select" class="form-select w-auto d-none">
                 <option value="light">Light</option>
                 <option value="dark">Dark</option>
               </select>
+              <button id="mode-toggle" class="btn btn-outline-secondary p-0 d-flex align-items-center justify-content-center" type="button" aria-label="Toggle light or dark mode" title="Toggle Light/Dark Mode" style="width: 38px; height: 38px;">
+                <i id="mode-icon" class="bi bi-sun-fill fs-5"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -1246,11 +1268,39 @@
 
           if (!isNaN(originalPrice)) {
             var usdPrice = originalPrice * origRateToUSD;
+            row.usdPrice = usdPrice;
             var converted = usdPrice / targetRate;
             row.price = (Math.round(converted * 100) / 100).toFixed(2);
           }
           return row;
         });
+      }
+
+      function updatePriceRangeLabels() {
+        var targetCurrency = ($('#currency-select').val() || 'usd').toLowerCase();
+        var targetRate = EXCHANGE_RATES[targetCurrency] || 1.0;
+        var symbol = CURRENCY_SYMBOLS[targetCurrency] || '$';
+
+        var t1 = (4.99 / targetRate).toFixed(2);
+        var t2_min = (5.00 / targetRate).toFixed(2);
+        var t2_max = (9.99 / targetRate).toFixed(2);
+        var t3_min = (10.00 / targetRate).toFixed(2);
+        var t3_max = (19.99 / targetRate).toFixed(2);
+        var t4_min = (20.00 / targetRate).toFixed(2);
+        var t4_max = (39.99 / targetRate).toFixed(2);
+        var t5_min = (40.00 / targetRate).toFixed(2);
+        var t5_max = (79.99 / targetRate).toFixed(2);
+        var t6_min = (80.00 / targetRate).toFixed(2);
+        var t6_max = (159.99 / targetRate).toFixed(2);
+        var t7 = (160.00 / targetRate).toFixed(2);
+
+        $('#price-range option[value="tier1"]').text(symbol + t1 + '/mo or less');
+        $('#price-range option[value="tier2"]').text(symbol + t2_min + '/mo - ' + symbol + t2_max + '/mo');
+        $('#price-range option[value="tier3"]').text(symbol + t3_min + '/mo - ' + symbol + t3_max + '/mo');
+        $('#price-range option[value="tier4"]').text(symbol + t4_min + '/mo - ' + symbol + t4_max + '/mo');
+        $('#price-range option[value="tier5"]').text(symbol + t5_min + '/mo - ' + symbol + t5_max + '/mo');
+        $('#price-range option[value="tier6"]').text(symbol + t6_min + '/mo - ' + symbol + t6_max + '/mo');
+        $('#price-range option[value="tier7"]').text(symbol + t7 + '/mo and above');
       }
 
       function priceFormatter(value) {
@@ -1275,26 +1325,42 @@
         return 0;
       }
 
-      function matchesPriceRange(priceVal, tier) {
-        if (priceVal === null || priceVal === undefined) return false;
-        var p = parseFloat(priceVal.toString().replace(/[^0-9.-]/g, ''));
-        if (isNaN(p)) return false;
+      function matchesPriceRange(row, tier) {
+        if (!row || tier === 'all' || !tier) return true;
+
+        var targetCurrency = ($('#currency-select').val() || 'usd').toLowerCase();
+        var targetRate = EXCHANGE_RATES[targetCurrency] || 1.0;
+
+        var usdPrice;
+        if (typeof row === 'object' && row !== null) {
+          if (row.usdPrice !== undefined) {
+            usdPrice = parseFloat(row.usdPrice);
+          } else if (row.price !== undefined) {
+            var p = parseFloat(row.price.toString().replace(/[^0-9.-]/g, ''));
+            usdPrice = p * targetRate;
+          }
+        } else {
+          var p = parseFloat(row.toString().replace(/[^0-9.-]/g, ''));
+          usdPrice = p * targetRate;
+        }
+
+        if (isNaN(usdPrice)) return false;
 
         switch (tier) {
           case 'tier1':
-            return p <= 4.99;
+            return usdPrice <= 4.99;
           case 'tier2':
-            return p >= 5.00 && p <= 9.99;
+            return usdPrice >= 5.00 && usdPrice <= 9.99;
           case 'tier3':
-            return p >= 10.00 && p <= 19.99;
+            return usdPrice >= 10.00 && usdPrice <= 19.99;
           case 'tier4':
-            return p >= 20.00 && p <= 39.99;
+            return usdPrice >= 20.00 && usdPrice <= 39.99;
           case 'tier5':
-            return p >= 40.00 && p <= 79.99;
+            return usdPrice >= 40.00 && usdPrice <= 79.99;
           case 'tier6':
-            return p >= 80.00 && p <= 159.99;
+            return usdPrice >= 80.00 && usdPrice <= 159.99;
           case 'tier7':
-            return p >= 160.00;
+            return usdPrice >= 160.00;
           default:
             return true;
         }
@@ -1312,7 +1378,7 @@
           }
 
           // Check price tier match
-          if (!matchesPriceRange(row.price, selectedTier)) {
+          if (!matchesPriceRange(row, selectedTier)) {
             return false;
           }
 
@@ -1344,6 +1410,13 @@
 
       function applyMode(mode) {
         document.documentElement.setAttribute('data-bs-theme', mode);
+        var $icon = $('#mode-icon');
+        if (mode === 'dark') {
+          $icon.removeClass('bi-moon-stars-fill').addClass('bi-sun-fill');
+        } else {
+          $icon.removeClass('bi-sun-fill').addClass('bi-moon-stars-fill');
+        }
+        $('#mode-select').val(mode);
       }
 
       $(function () {
@@ -1357,11 +1430,19 @@
 
         applyTheme(savedTheme);
         applyMode(savedMode);
+        updatePriceRangeLabels();
 
         $('#theme-select').on('change', function () {
           var theme = $(this).val();
           localStorage.setItem('bootlegance_theme', theme);
           applyTheme(theme);
+        });
+
+        $('#mode-toggle').on('click', function () {
+          var currentMode = localStorage.getItem('bootlegance_mode') || 'light';
+          var newMode = currentMode === 'dark' ? 'light' : 'dark';
+          localStorage.setItem('bootlegance_mode', newMode);
+          applyMode(newMode);
         });
 
         $('#mode-select').on('change', function () {
@@ -1373,6 +1454,7 @@
         $('#currency-select').on('change', function () {
           var currency = $(this).val();
           localStorage.setItem('vps_currency', currency);
+          updatePriceRangeLabels();
           $('#vps-table').bootstrapTable('refreshOptions', {});
         });
 
