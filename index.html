@@ -12,14 +12,116 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css">
   </head>
   <body>
-    <div class="container my-4">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm mb-4 border-bottom">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="#">
+          <i class="bi bi-hdd-stack me-2 text-primary"></i>
+          VPS Price Comparison
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <div class="ms-auto d-flex flex-wrap align-items-center gap-3 mt-2 mt-lg-0">
+            <div class="d-flex align-items-center">
+              <label for="theme-select" class="me-2 fw-bold text-nowrap"><i class="bi bi-palette me-1"></i>Theme:</label>
+              <select id="theme-select" class="form-select w-auto">
+                <option value="default">Default (Bootstrap)</option>
+                <option value="adwaita">Adwaita</option>
+                <option value="ant-design">Ant Design</option>
+                <option value="ayu">Ayu</option>
+                <option value="brutalski">Brutalski</option>
+                <option value="carbon">Carbon</option>
+                <option value="catppuccin">Catppuccin</option>
+                <option value="catppuccin-frappe">Catppuccin Frappé</option>
+                <option value="catppuccin-macchiato">Catppuccin Macchiato</option>
+                <option value="civic">Civic</option>
+                <option value="cyberpunk">Cyberpunk</option>
+                <option value="dracula">Dracula</option>
+                <option value="dracula-soft">Dracula Soft</option>
+                <option value="editorial">Editorial</option>
+                <option value="everforest">Everforest</option>
+                <option value="fluent">Fluent</option>
+                <option value="forest">Forest</option>
+                <option value="github-primer">GitHub Primer</option>
+                <option value="glassmorphism">Glassmorphism</option>
+                <option value="gruvbox">Gruvbox</option>
+                <option value="high-contrast">High Contrast</option>
+                <option value="kanagawa">Kanagawa</option>
+                <option value="kde-breeze">KDE Breeze</option>
+                <option value="mac-classic">Classic Mac OS</option>
+                <option value="material-3">Material Design 3</option>
+                <option value="midnight">Midnight</option>
+                <option value="neo-brutalism">Neo-brutalism</option>
+                <option value="night-owl">Night Owl</option>
+                <option value="nord">Nord</option>
+                <option value="nord-aurora">Nord Aurora</option>
+                <option value="nord-frost">Nord Frost</option>
+                <option value="ocean">Ocean</option>
+                <option value="one-dark">One Dark</option>
+                <option value="orchis">Orchis</option>
+                <option value="orchis-cyan">Orchis Cyan</option>
+                <option value="orchis-green">Orchis Green</option>
+                <option value="orchis-orange">Orchis Orange</option>
+                <option value="orchis-pink">Orchis Pink</option>
+                <option value="orchis-purple">Orchis Purple</option>
+                <option value="orchis-red">Orchis Red</option>
+                <option value="orchis-sage">Orchis Sage</option>
+                <option value="orchis-slate">Orchis Slate</option>
+                <option value="orchis-yellow">Orchis Yellow</option>
+                <option value="pantheon">Pantheon</option>
+                <option value="print-optimized">Print-Optimized</option>
+                <option value="rose-pine">Rosé Pine</option>
+                <option value="seneca">Seneca</option>
+                <option value="sepia">Sepia</option>
+                <option value="slate">Slate</option>
+                <option value="solarized">Solarized</option>
+                <option value="sunrise">Sunrise</option>
+                <option value="swiss">Swiss</option>
+                <option value="terminal">Terminal</option>
+                <option value="tokyo-night">Tokyo Night</option>
+                <option value="vanguard">Vanguard</option>
+                <option value="vimix">Vimix</option>
+                <option value="vimix-dark">Vimix Dark</option>
+                <option value="vimix-green">Vimix Green</option>
+                <option value="vimix-orange">Vimix Orange</option>
+                <option value="vimix-pink">Vimix Pink</option>
+                <option value="vimix-purple">Vimix Purple</option>
+                <option value="vimix-red">Vimix Red</option>
+                <option value="vimix-teal">Vimix Teal</option>
+                <option value="vimix-yellow">Vimix Yellow</option>
+                <option value="whitehall">Whitehall</option>
+                <option value="whitesur">WhiteSur</option>
+                <option value="win98">Windows 98</option>
+                <option value="yaru">Yaru</option>
+              </select>
+            </div>
+
+            <div class="d-flex align-items-center">
+              <label for="mode-select" class="me-2 fw-bold text-nowrap"><i class="bi bi-circle-half me-1"></i>Mode:</label>
+              <select id="mode-select" class="form-select w-auto">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mb-4">
       <div class="alert alert-warning text-center py-2 mb-3" role="alert">
         <small>All the prices have been researched by AI and may be inaccurate or outdated.</small>
       </div>
 
-      <h1 class="mb-4 text-center">VPS Prices</h1>
-
       <div id="toolbar" class="d-flex flex-wrap align-items-center gap-3 mb-2">
+        <div class="d-flex align-items-center">
+          <label for="provider-filter" class="me-2 fw-bold">Provider:</label>
+          <select id="provider-filter" class="form-select w-auto">
+            <option value="all">All Providers</option>
+          </select>
+        </div>
+
         <div class="d-flex align-items-center">
           <label for="price-range" class="me-2 fw-bold">Price Range:</label>
           <select id="price-range" class="form-select w-auto">
@@ -31,88 +133,6 @@
             <option value="tier5">$40.00/mo - $79.99/mo</option>
             <option value="tier6">$80.00/mo - $159.99/mo</option>
             <option value="tier7">$160.00/mo and above</option>
-          </select>
-        </div>
-
-        <div class="d-flex align-items-center">
-          <label for="theme-select" class="me-2 fw-bold"><i class="bi bi-palette me-1"></i>Theme:</label>
-          <select id="theme-select" class="form-select w-auto">
-            <option value="default">Default (Bootstrap)</option>
-            <option value="adwaita">Adwaita</option>
-            <option value="ant-design">Ant Design</option>
-            <option value="ayu">Ayu</option>
-            <option value="brutalski">Brutalski</option>
-            <option value="carbon">Carbon</option>
-            <option value="catppuccin">Catppuccin</option>
-            <option value="catppuccin-frappe">Catppuccin Frappé</option>
-            <option value="catppuccin-macchiato">Catppuccin Macchiato</option>
-            <option value="civic">Civic</option>
-            <option value="cyberpunk">Cyberpunk</option>
-            <option value="dracula">Dracula</option>
-            <option value="dracula-soft">Dracula Soft</option>
-            <option value="editorial">Editorial</option>
-            <option value="everforest">Everforest</option>
-            <option value="fluent">Fluent</option>
-            <option value="forest">Forest</option>
-            <option value="github-primer">GitHub Primer</option>
-            <option value="glassmorphism">Glassmorphism</option>
-            <option value="gruvbox">Gruvbox</option>
-            <option value="high-contrast">High Contrast</option>
-            <option value="kanagawa">Kanagawa</option>
-            <option value="kde-breeze">KDE Breeze</option>
-            <option value="mac-classic">Classic Mac OS</option>
-            <option value="material-3">Material Design 3</option>
-            <option value="midnight">Midnight</option>
-            <option value="neo-brutalism">Neo-brutalism</option>
-            <option value="night-owl">Night Owl</option>
-            <option value="nord">Nord</option>
-            <option value="nord-aurora">Nord Aurora</option>
-            <option value="nord-frost">Nord Frost</option>
-            <option value="ocean">Ocean</option>
-            <option value="one-dark">One Dark</option>
-            <option value="orchis">Orchis</option>
-            <option value="orchis-cyan">Orchis Cyan</option>
-            <option value="orchis-green">Orchis Green</option>
-            <option value="orchis-orange">Orchis Orange</option>
-            <option value="orchis-pink">Orchis Pink</option>
-            <option value="orchis-purple">Orchis Purple</option>
-            <option value="orchis-red">Orchis Red</option>
-            <option value="orchis-sage">Orchis Sage</option>
-            <option value="orchis-slate">Orchis Slate</option>
-            <option value="orchis-yellow">Orchis Yellow</option>
-            <option value="pantheon">Pantheon</option>
-            <option value="print-optimized">Print-Optimized</option>
-            <option value="rose-pine">Rosé Pine</option>
-            <option value="seneca">Seneca</option>
-            <option value="sepia">Sepia</option>
-            <option value="slate">Slate</option>
-            <option value="solarized">Solarized</option>
-            <option value="sunrise">Sunrise</option>
-            <option value="swiss">Swiss</option>
-            <option value="terminal">Terminal</option>
-            <option value="tokyo-night">Tokyo Night</option>
-            <option value="vanguard">Vanguard</option>
-            <option value="vimix">Vimix</option>
-            <option value="vimix-dark">Vimix Dark</option>
-            <option value="vimix-green">Vimix Green</option>
-            <option value="vimix-orange">Vimix Orange</option>
-            <option value="vimix-pink">Vimix Pink</option>
-            <option value="vimix-purple">Vimix Purple</option>
-            <option value="vimix-red">Vimix Red</option>
-            <option value="vimix-teal">Vimix Teal</option>
-            <option value="vimix-yellow">Vimix Yellow</option>
-            <option value="whitehall">Whitehall</option>
-            <option value="whitesur">WhiteSur</option>
-            <option value="win98">Windows 98</option>
-            <option value="yaru">Yaru</option>
-          </select>
-        </div>
-
-        <div class="d-flex align-items-center">
-          <label for="mode-select" class="me-2 fw-bold"><i class="bi bi-circle-half me-1"></i>Mode:</label>
-          <select id="mode-select" class="form-select w-auto">
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
           </select>
         </div>
       </div>
@@ -147,8 +167,8 @@
             <th data-field="disk" data-sortable="true" data-sorter="numberSorter">
               Disk (GB)
             </th>
-            <th data-field="price" data-sortable="true" data-sorter="numberSorter">
-              Price ($)
+            <th data-field="price" data-sortable="true" data-sorter="numberSorter" data-formatter="priceFormatter">
+              Price
             </th>
             <th data-field="updated_at" data-sortable="true">
               Date Checked
@@ -168,7 +188,25 @@
         gbp: 1.32
       };
 
+      function populateProviderFilter(res) {
+        var providers = {};
+        res.forEach(function (row) {
+          if (row.provider) {
+            providers[row.provider] = true;
+          }
+        });
+        var sortedProviders = Object.keys(providers).sort();
+        var $select = $('#provider-filter');
+        var currentVal = $select.val() || 'all';
+        $select.html('<option value="all">All Providers</option>');
+        sortedProviders.forEach(function (provider) {
+          $select.append($('<option></option>').val(provider).text(provider));
+        });
+        $select.val(currentVal);
+      }
+
       function responseHandler(res) {
+        populateProviderFilter(res);
         return res.map(function (row) {
           var currency = (row.currency || 'usd').toLowerCase();
           var rate = EXCHANGE_RATES[currency] || 1.0;
@@ -182,9 +220,19 @@
         });
       }
 
+      function priceFormatter(value) {
+        if (value === null || value === undefined || value === '') return '';
+        var strVal = value.toString().replace(/[^0-9.-]/g, '');
+        var num = parseFloat(strVal);
+        if (isNaN(num)) return value;
+        return '$' + num.toFixed(2);
+      }
+
       function numberSorter(a, b) {
-        var aa = parseFloat(a);
-        var bb = parseFloat(b);
+        var strA = (a !== null && a !== undefined) ? a.toString().replace(/[^0-9.-]/g, '') : '';
+        var strB = (b !== null && b !== undefined) ? b.toString().replace(/[^0-9.-]/g, '') : '';
+        var aa = parseFloat(strA);
+        var bb = parseFloat(strB);
         if (isNaN(aa)) aa = 0;
         if (isNaN(bb)) bb = 0;
         if (aa < bb) return -1;
@@ -193,7 +241,8 @@
       }
 
       function matchesPriceRange(priceVal, tier) {
-        var p = parseFloat(priceVal);
+        if (priceVal === null || priceVal === undefined) return false;
+        var p = parseFloat(priceVal.toString().replace(/[^0-9.-]/g, ''));
         if (isNaN(p)) return false;
 
         switch (tier) {
@@ -218,9 +267,15 @@
 
       function priceRangeCustomSearch(data, text) {
         var selectedTier = $('#price-range').val();
+        var selectedProvider = $('#provider-filter').val();
         var searchText = text ? text.toLowerCase().trim() : '';
 
         return data.filter(function (row) {
+          // Check provider match
+          if (selectedProvider && selectedProvider !== 'all' && row.provider !== selectedProvider) {
+            return false;
+          }
+
           // Check price tier match
           if (!matchesPriceRange(row.price, selectedTier)) {
             return false;
@@ -278,7 +333,7 @@
           applyMode(mode);
         });
 
-        $('#price-range').on('change', function () {
+        $('#price-range, #provider-filter').on('change', function () {
           $('#vps-table').bootstrapTable('refreshOptions', {});
         });
       });
