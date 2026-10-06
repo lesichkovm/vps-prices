@@ -61,6 +61,7 @@ jobs:
       - name: Create or Update Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
+          token: ${{ secrets.PAT || secrets.GH_PAT || secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
           commit-message: "chore: update VPS prices"
           branch: "automation/price-update"
           delete-branch: true
