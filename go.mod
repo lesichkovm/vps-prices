@@ -1,3 +1,3 @@
 module github.com/lesichkovm/vps-prices
 
-go 1.22
+go 1.27
