@@ -14,10 +14,10 @@ Choosing a VPS can be overwhelming due to varying specs, tier structures, and pr
 
 ### Currency Standardization
 
-To allow a fair, apples-to-apples comparison across all providers, all prices originally quoted in Euros (EUR) or British Pounds (GBP) are converted to US Dollars (USD). The exchange rates used are:
+To allow a fair, apples-to-apples comparison across all providers, all prices originally quoted in Euros (EUR) or British Pounds (GBP) are converted to US Dollars (USD). The exchange rates fetched on 2026-08-16 from Open Exchange Rates are:
 
-- **1 EUR = 1.16 USD**
-- **1 GBP = 1.37 USD**
+- **1 EUR = 1.12 USD**
+- **1 GBP = 1.32 USD**
 
 ## Researched Providers
 
@@ -45,4 +45,4 @@ Detailed research notes and data sources are maintained in the [`research/`](res
 
 ## License
 
-MIT
+GPL-3.0
