@@ -38,14 +38,26 @@ func getSourceType(pName string) (string, bool, string) {
 		return "HTML", false, ""
 	case "Hetzner":
 		return "token API", true, "HCLOUD_TOKEN"
+	case "Hostinger":
+		return "HTML", false, ""
+	case "IONOS":
+		return "HTML", false, ""
+	case "Kamatera":
+		return "HTML", false, ""
 	case "Linode":
 		return "API", false, ""
+	case "Netcup":
+		return "HTML", false, ""
 	case "OVH":
 		return "API", false, ""
+	case "RackNerd":
+		return "HTML", false, ""
 	case "Raff Technologies":
 		return "HTML", false, ""
 	case "Scaleway":
 		return "API", false, ""
+	case "UpCloud":
+		return "HTML", false, ""
 	case "Vultr":
 		return "API", false, ""
 	default:
@@ -67,14 +79,26 @@ func getProviderSlug(pName string) string {
 		return "evps"
 	case "Hetzner":
 		return "hetzner"
+	case "Hostinger":
+		return "hostinger"
+	case "IONOS":
+		return "ionos"
+	case "Kamatera":
+		return "kamatera"
 	case "Linode":
 		return "linode"
+	case "Netcup":
+		return "netcup"
 	case "OVH":
 		return "ovh"
+	case "RackNerd":
+		return "racknerd"
 	case "Raff Technologies":
 		return "raff_technologies"
 	case "Scaleway":
 		return "scaleway"
+	case "UpCloud":
+		return "upcloud"
 	case "Vultr":
 		return "vultr"
 	default:

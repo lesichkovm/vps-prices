@@ -149,3 +149,143 @@ func TestDigitalOceanProvider(t *testing.T) {
 		t.Fatalf("Expected 2 DigitalOcean plans, got %d", len(plans))
 	}
 }
+
+func TestHostingerProvider(t *testing.T) {
+	fixture := getFixture(t, "hostinger.html")
+
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/html")
+		_, _ = w.Write(fixture)
+	}))
+	defer server.Close()
+
+	client := NewHTTPClient(5 * time.Second)
+	provider := NewHostingerProvider(client, server.URL)
+
+	plans, err := provider.Fetch(context.Background())
+	if err != nil {
+		t.Fatalf("Hostinger Fetch error: %v", err)
+	}
+
+	if len(plans) != 4 {
+		t.Fatalf("Expected 4 Hostinger plans, got %d", len(plans))
+	}
+
+	if plans[0].Provider != "Hostinger" || plans[0].Price != "19.49" {
+		t.Errorf("Unexpected Hostinger plan 0: %+v", plans[0])
+	}
+}
+
+func TestNetcupProvider(t *testing.T) {
+	fixture := getFixture(t, "netcup.html")
+
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/html")
+		_, _ = w.Write(fixture)
+	}))
+	defer server.Close()
+
+	client := NewHTTPClient(5 * time.Second)
+	provider := NewNetcupProvider(client, server.URL)
+
+	plans, err := provider.Fetch(context.Background())
+	if err != nil {
+		t.Fatalf("Netcup Fetch error: %v", err)
+	}
+
+	if len(plans) != 5 {
+		t.Fatalf("Expected 5 Netcup plans, got %d", len(plans))
+	}
+
+	if plans[0].Provider != "Netcup" || plans[0].Currency != "eur" {
+		t.Errorf("Unexpected Netcup plan 0: %+v", plans[0])
+	}
+}
+
+func TestIONOSProvider(t *testing.T) {
+	fixture := getFixture(t, "ionos.html")
+
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/html")
+		_, _ = w.Write(fixture)
+	}))
+	defer server.Close()
+
+	client := NewHTTPClient(5 * time.Second)
+	provider := NewIONOSProvider(client, server.URL)
+
+	plans, err := provider.Fetch(context.Background())
+	if err != nil {
+		t.Fatalf("IONOS Fetch error: %v", err)
+	}
+
+	if len(plans) != 6 {
+		t.Fatalf("Expected 6 IONOS plans, got %d", len(plans))
+	}
+}
+
+func TestUpCloudProvider(t *testing.T) {
+	fixture := getFixture(t, "upcloud.html")
+
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/html")
+		_, _ = w.Write(fixture)
+	}))
+	defer server.Close()
+
+	client := NewHTTPClient(5 * time.Second)
+	provider := NewUpCloudProvider(client, server.URL)
+
+	plans, err := provider.Fetch(context.Background())
+	if err != nil {
+		t.Fatalf("UpCloud Fetch error: %v", err)
+	}
+
+	if len(plans) != 6 {
+		t.Fatalf("Expected 6 UpCloud plans, got %d", len(plans))
+	}
+}
+
+func TestRackNerdProvider(t *testing.T) {
+	fixture := getFixture(t, "racknerd.html")
+
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/html")
+		_, _ = w.Write(fixture)
+	}))
+	defer server.Close()
+
+	client := NewHTTPClient(5 * time.Second)
+	provider := NewRackNerdProvider(client, server.URL)
+
+	plans, err := provider.Fetch(context.Background())
+	if err != nil {
+		t.Fatalf("RackNerd Fetch error: %v", err)
+	}
+
+	if len(plans) != 7 {
+		t.Fatalf("Expected 7 RackNerd plans, got %d", len(plans))
+	}
+}
+
+func TestKamateraProvider(t *testing.T) {
+	fixture := getFixture(t, "kamatera.html")
+
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/html")
+		_, _ = w.Write(fixture)
+	}))
+	defer server.Close()
+
+	client := NewHTTPClient(5 * time.Second)
+	provider := NewKamateraProvider(client, server.URL)
+
+	plans, err := provider.Fetch(context.Background())
+	if err != nil {
+		t.Fatalf("Kamatera Fetch error: %v", err)
+	}
+
+	if len(plans) != 6 {
+		t.Fatalf("Expected 6 Kamatera plans, got %d", len(plans))
+	}
+}
