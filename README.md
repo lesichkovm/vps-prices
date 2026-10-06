@@ -31,10 +31,16 @@ Below is the list of VPS hosting providers included in our comparison along with
 - [DigitalOcean](https://www.digitalocean.com/)
 - [eVPS](https://www.evps.net/packages)
 - [Hetzner](https://www.hetzner.com/)
+- [Hostinger](https://www.hostinger.com/)
+- [IONOS](https://www.ionos.com/)
+- [Kamatera](https://www.kamatera.com/)
 - [Linode (Akamai)](https://www.linode.com/)
+- [Netcup](https://www.netcup.de/)
 - [OVHcloud](https://www.ovhcloud.com/)
+- [RackNerd](https://www.racknerd.com/)
 - [Raff Technologies](https://rafftechnologies.com/)
 - [Scaleway](https://www.scaleway.com/)
+- [UpCloud](https://upcloud.com/)
 - [Vultr](https://www.vultr.com/)
 
 Detailed research notes and data sources are maintained in the [`research/`](research/) directory.

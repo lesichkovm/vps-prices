@@ -15,10 +15,16 @@ func GetAllProviders(timeout time.Duration) []model.Provider {
 		NewDigitalOceanProvider(client, ""),
 		NewEVPSProvider(client, ""),
 		NewHetznerProvider(client, ""),
+		NewHostingerProvider(client, ""),
+		NewIONOSProvider(client, ""),
+		NewKamateraProvider(client, ""),
 		NewLinodeProvider(client, ""),
+		NewNetcupProvider(client, ""),
 		NewOVHProvider(client, ""),
+		NewRackNerdProvider(client, ""),
 		NewRaffProvider(client, ""),
 		NewScalewayProvider(client, ""),
+		NewUpCloudProvider(client, ""),
 		NewVultrProvider(client, ""),
 	}
 }

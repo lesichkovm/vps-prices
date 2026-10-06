@@ -18,10 +18,16 @@ var ExpectedProviders = []string{
 	"DigitalOcean",
 	"eVPS",
 	"Hetzner",
+	"Hostinger",
+	"IONOS",
+	"Kamatera",
 	"Linode",
+	"Netcup",
 	"OVH",
+	"RackNerd",
 	"Raff Technologies",
 	"Scaleway",
+	"UpCloud",
 	"Vultr",
 }
 
