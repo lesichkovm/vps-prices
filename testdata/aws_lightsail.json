@@ -1,0 +1,52 @@
+{
+  "products": {
+    "SKU1": {
+      "attributes": {
+        "location": "US East (N. Virginia)",
+        "operatingSystem": "Linux",
+        "group": "Lightsail Instance",
+        "usagetype": "USE1-BundleUsage:0.5GB",
+        "vcpu": "2",
+        "memory": "0.5GB",
+        "storage": "20GB"
+      }
+    },
+    "SKU2": {
+      "attributes": {
+        "location": "US East (N. Virginia)",
+        "operatingSystem": "Linux",
+        "group": "Lightsail Instance",
+        "usagetype": "USE1-BundleUsage:1GB",
+        "vcpu": "2",
+        "memory": "1GB",
+        "storage": "40GB"
+      }
+    }
+  },
+  "terms": {
+    "OnDemand": {
+      "SKU1": {
+        "SKU1.TERM": {
+          "priceDimensions": {
+            "SKU1.TERM.DIM": {
+              "pricePerUnit": {
+                "USD": "0.00672"
+              }
+            }
+          }
+        }
+      },
+      "SKU2": {
+        "SKU2.TERM": {
+          "priceDimensions": {
+            "SKU2.TERM.DIM": {
+              "pricePerUnit": {
+                "USD": "0.0094"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

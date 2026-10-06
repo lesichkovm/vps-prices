@@ -1,122 +1,5 @@
 [
   {
-    "provider": "Vultr (IPv6)",
-    "memory": "0.5",
-    "cpu": "1",
-    "disk": "10",
-    "price": "2.50",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "CloudFanatic",
-    "memory": "1",
-    "cpu": "1",
-    "disk": "30",
-    "price": "2.99",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "eVPS",
-    "memory": "3",
-    "cpu": "1",
-    "disk": "40",
-    "price": "3.00",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Vultr",
-    "memory": "0.5",
-    "cpu": "1",
-    "disk": "10",
-    "price": "3.50",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "DigitalOcean",
-    "memory": "0.5",
-    "cpu": "1",
-    "disk": "10",
-    "price": "4.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "CloudFanatic",
-    "memory": "2",
-    "cpu": "2",
-    "disk": "60",
-    "price": "4.50",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "OVH",
-    "memory": "4",
-    "cpu": "2",
-    "disk": "40",
-    "price": "3.44",
-    "currency": "gbp",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "AWS Lightsail",
-    "memory": "0.5",
-    "cpu": "2",
-    "disk": "20",
-    "price": "5.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Linode",
-    "memory": "1",
-    "cpu": "1",
-    "disk": "25",
-    "price": "5.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Vultr",
-    "memory": "1",
-    "cpu": "1",
-    "disk": "25",
-    "price": "5.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Scaleway",
-    "memory": "1",
-    "cpu": "1",
-    "disk": "20",
-    "price": "4.99",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "DigitalOcean",
-    "memory": "1",
-    "cpu": "1",
-    "disk": "25",
-    "price": "6.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Hetzner",
-    "memory": "2",
-    "cpu": "1",
-    "disk": "20",
-    "price": "5.49",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
     "provider": "Contabo",
     "memory": "8",
     "cpu": "4",
@@ -126,200 +9,11 @@
     "updated_at": "2026-08-16"
   },
   {
-    "provider": "AWS Lightsail",
-    "memory": "1",
-    "cpu": "2",
-    "disk": "40",
-    "price": "7.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Scaleway",
-    "memory": "2",
-    "cpu": "2",
-    "disk": "30",
-    "price": "6.99",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "eVPS",
-    "memory": "6",
-    "cpu": "3",
-    "disk": "75",
-    "price": "7.00",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Raff Technologies",
-    "memory": "2",
-    "cpu": "2",
-    "disk": "40",
-    "price": "8.49",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "OVH",
-    "memory": "8",
-    "cpu": "4",
-    "disk": "75",
-    "price": "6.44",
-    "currency": "gbp",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "CloudFanatic",
-    "memory": "4",
-    "cpu": "4",
-    "disk": "100",
-    "price": "9.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Hetzner",
-    "memory": "4",
-    "cpu": "2",
-    "disk": "40",
-    "price": "8.49",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Vultr",
-    "memory": "2",
-    "cpu": "1",
-    "disk": "55",
-    "price": "10.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
     "provider": "Contabo",
     "memory": "16",
     "cpu": "6",
     "disk": "100",
     "price": "10.49",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "AWS Lightsail",
-    "memory": "2",
-    "cpu": "2",
-    "disk": "60",
-    "price": "12.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "DigitalOcean",
-    "memory": "2",
-    "cpu": "1",
-    "disk": "50",
-    "price": "12.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Linode",
-    "memory": "2",
-    "cpu": "1",
-    "disk": "50",
-    "price": "12.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "OVH",
-    "memory": "12",
-    "cpu": "6",
-    "disk": "100",
-    "price": "9.33",
-    "currency": "gbp",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "eVPS",
-    "memory": "8",
-    "cpu": "4",
-    "disk": "100",
-    "price": "12.00",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Raff Technologies",
-    "memory": "4",
-    "cpu": "2",
-    "disk": "80",
-    "price": "13.99",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Vultr",
-    "memory": "2",
-    "cpu": "2",
-    "disk": "65",
-    "price": "15.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Scaleway",
-    "memory": "4",
-    "cpu": "3",
-    "disk": "40",
-    "price": "14.49",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Raff Technologies",
-    "memory": "4",
-    "cpu": "4",
-    "disk": "80",
-    "price": "16.99",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Hetzner",
-    "memory": "8",
-    "cpu": "2",
-    "disk": "80",
-    "price": "15.99",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "CloudFanatic",
-    "memory": "8",
-    "cpu": "8",
-    "disk": "200",
-    "price": "18.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "DigitalOcean",
-    "memory": "2",
-    "cpu": "2",
-    "disk": "60",
-    "price": "18.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "eVPS",
-    "memory": "10",
-    "cpu": "5",
-    "disk": "150",
-    "price": "17.00",
     "currency": "eur",
     "updated_at": "2026-08-16"
   },
@@ -333,12 +27,93 @@
     "updated_at": "2026-08-16"
   },
   {
-    "provider": "Vultr",
+    "provider": "Contabo",
+    "memory": "60",
+    "cpu": "10",
+    "disk": "400",
+    "price": "31.49",
+    "currency": "eur",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "DigitalOcean",
+    "memory": "0.5",
+    "cpu": "1",
+    "disk": "10",
+    "price": "4.00",
+    "currency": "usd",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "DigitalOcean",
+    "memory": "1",
+    "cpu": "1",
+    "disk": "25",
+    "price": "6.00",
+    "currency": "usd",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "DigitalOcean",
+    "memory": "2",
+    "cpu": "1",
+    "disk": "50",
+    "price": "12.00",
+    "currency": "usd",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "DigitalOcean",
+    "memory": "2",
+    "cpu": "2",
+    "disk": "60",
+    "price": "18.00",
+    "currency": "usd",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "DigitalOcean",
     "memory": "4",
     "cpu": "2",
     "disk": "80",
-    "price": "20.00",
+    "price": "24.00",
     "currency": "usd",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "DigitalOcean",
+    "memory": "8",
+    "cpu": "4",
+    "disk": "160",
+    "price": "48.00",
+    "currency": "usd",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "DigitalOcean",
+    "memory": "16",
+    "cpu": "8",
+    "disk": "320",
+    "price": "96.00",
+    "currency": "usd",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "Hetzner",
+    "memory": "2",
+    "cpu": "1",
+    "disk": "20",
+    "price": "5.49",
+    "currency": "eur",
+    "updated_at": "2026-08-16"
+  },
+  {
+    "provider": "Hetzner",
+    "memory": "4",
+    "cpu": "2",
+    "disk": "40",
+    "price": "8.49",
+    "currency": "eur",
     "updated_at": "2026-08-16"
   },
   {
@@ -351,120 +126,12 @@
     "updated_at": "2026-08-16"
   },
   {
-    "provider": "OVH",
-    "memory": "24",
-    "cpu": "8",
-    "disk": "200",
-    "price": "17.70",
-    "currency": "gbp",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "AWS Lightsail",
-    "memory": "4",
-    "cpu": "2",
-    "disk": "80",
-    "price": "24.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "DigitalOcean",
-    "memory": "4",
-    "cpu": "2",
-    "disk": "80",
-    "price": "24.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Linode",
-    "memory": "4",
-    "cpu": "2",
-    "disk": "80",
-    "price": "24.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Scaleway",
-    "memory": "8",
-    "cpu": "4",
-    "disk": "100",
-    "price": "23.49",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Raff Technologies",
-    "memory": "8",
-    "cpu": "2",
-    "disk": "160",
-    "price": "27.99",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "eVPS",
-    "memory": "14",
-    "cpu": "6",
-    "disk": "200",
-    "price": "25.00",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "CloudFanatic",
-    "memory": "12",
-    "cpu": "8",
-    "disk": "400",
-    "price": "29.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Raff Technologies",
-    "memory": "8",
-    "cpu": "4",
-    "disk": "160",
-    "price": "30.99",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
     "provider": "Hetzner",
-    "memory": "16",
-    "cpu": "4",
-    "disk": "160",
-    "price": "29.49",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "eVPS",
-    "memory": "18",
-    "cpu": "7",
-    "disk": "250",
-    "price": "30.00",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Contabo",
-    "memory": "60",
-    "cpu": "10",
-    "disk": "400",
-    "price": "31.49",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Raff Technologies",
     "memory": "8",
-    "cpu": "8",
-    "disk": "160",
-    "price": "37.99",
-    "currency": "usd",
+    "cpu": "2",
+    "disk": "80",
+    "price": "15.99",
+    "currency": "eur",
     "updated_at": "2026-08-16"
   },
   {
@@ -477,102 +144,12 @@
     "updated_at": "2026-08-16"
   },
   {
-    "provider": "CloudFanatic",
+    "provider": "Hetzner",
     "memory": "16",
-    "cpu": "12",
-    "disk": "500",
-    "price": "40.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Vultr",
-    "memory": "8",
     "cpu": "4",
     "disk": "160",
-    "price": "40.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "AWS Lightsail",
-    "memory": "8",
-    "cpu": "2",
-    "disk": "160",
-    "price": "44.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "eVPS",
-    "memory": "40",
-    "cpu": "10",
-    "disk": "300",
-    "price": "40.00",
+    "price": "29.49",
     "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "DigitalOcean",
-    "memory": "8",
-    "cpu": "4",
-    "disk": "160",
-    "price": "48.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Linode",
-    "memory": "8",
-    "cpu": "4",
-    "disk": "160",
-    "price": "48.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Scaleway",
-    "memory": "16",
-    "cpu": "8",
-    "disk": "160",
-    "price": "46.99",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Raff Technologies",
-    "memory": "16",
-    "cpu": "4",
-    "disk": "320",
-    "price": "52.99",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Raff Technologies",
-    "memory": "16",
-    "cpu": "8",
-    "disk": "320",
-    "price": "59.99",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Raff Technologies",
-    "memory": "16",
-    "cpu": "16",
-    "disk": "320",
-    "price": "75.99",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "CloudFanatic",
-    "memory": "32",
-    "cpu": "16",
-    "disk": "1000",
-    "price": "77.00",
-    "currency": "usd",
     "updated_at": "2026-08-16"
   },
   {
@@ -581,69 +158,6 @@
     "cpu": "8",
     "disk": "240",
     "price": "69.49",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "eVPS",
-    "memory": "80",
-    "cpu": "16",
-    "disk": "400",
-    "price": "70.00",
-    "currency": "eur",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Vultr",
-    "memory": "16",
-    "cpu": "6",
-    "disk": "320",
-    "price": "80.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "AWS Lightsail",
-    "memory": "16",
-    "cpu": "4",
-    "disk": "320",
-    "price": "84.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Raff Technologies",
-    "memory": "24",
-    "cpu": "12",
-    "disk": "480",
-    "price": "90.99",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "DigitalOcean",
-    "memory": "16",
-    "cpu": "8",
-    "disk": "320",
-    "price": "96.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Linode",
-    "memory": "16",
-    "cpu": "6",
-    "disk": "320",
-    "price": "96.00",
-    "currency": "usd",
-    "updated_at": "2026-08-16"
-  },
-  {
-    "provider": "Scaleway",
-    "memory": "32",
-    "cpu": "16",
-    "disk": "320",
-    "price": "89.99",
     "currency": "eur",
     "updated_at": "2026-08-16"
   },
@@ -657,13 +171,499 @@
     "updated_at": "2026-08-16"
   },
   {
+    "provider": "Vultr (IPv6)",
+    "memory": "0.5",
+    "cpu": "1",
+    "disk": "10",
+    "price": "2.50",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "CloudFanatic",
+    "memory": "1",
+    "cpu": "1",
+    "disk": "30",
+    "price": "2.99",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "eVPS",
+    "memory": "3",
+    "cpu": "1",
+    "disk": "40",
+    "price": "3.00",
+    "currency": "eur",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Vultr",
+    "memory": "0.5",
+    "cpu": "1",
+    "disk": "10",
+    "price": "3.50",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "OVH",
+    "memory": "4",
+    "cpu": "2",
+    "disk": "40",
+    "price": "3.31",
+    "currency": "gbp",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "CloudFanatic",
+    "memory": "2",
+    "cpu": "2",
+    "disk": "60",
+    "price": "4.50",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "AWS Lightsail",
+    "memory": "0.5",
+    "cpu": "2",
+    "disk": "20",
+    "price": "5.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Linode",
+    "memory": "1",
+    "cpu": "1",
+    "disk": "25",
+    "price": "5.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Vultr",
+    "memory": "1",
+    "cpu": "1",
+    "disk": "25",
+    "price": "5.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "OVH",
+    "memory": "8",
+    "cpu": "4",
+    "disk": "75",
+    "price": "3.97",
+    "currency": "gbp",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Scaleway",
+    "memory": "1",
+    "cpu": "1",
+    "disk": "20",
+    "price": "4.99",
+    "currency": "eur",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "AWS Lightsail",
+    "memory": "1",
+    "cpu": "2",
+    "disk": "40",
+    "price": "7.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Scaleway",
+    "memory": "2",
+    "cpu": "2",
+    "disk": "30",
+    "price": "6.99",
+    "currency": "eur",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "eVPS",
+    "memory": "6",
+    "cpu": "3",
+    "disk": "75",
+    "price": "7.00",
+    "currency": "eur",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "OVH",
+    "memory": "12",
+    "cpu": "6",
+    "disk": "100",
+    "price": "6.29",
+    "currency": "gbp",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "2",
+    "cpu": "2",
+    "disk": "40",
+    "price": "8.49",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "CloudFanatic",
+    "memory": "4",
+    "cpu": "4",
+    "disk": "100",
+    "price": "9.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "OVH",
+    "memory": "24",
+    "cpu": "8",
+    "disk": "200",
+    "price": "7.55",
+    "currency": "gbp",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Vultr",
+    "memory": "2",
+    "cpu": "1",
+    "disk": "55",
+    "price": "10.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "AWS Lightsail",
+    "memory": "2",
+    "cpu": "2",
+    "disk": "60",
+    "price": "12.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Linode",
+    "memory": "2",
+    "cpu": "1",
+    "disk": "50",
+    "price": "12.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "eVPS",
+    "memory": "8",
+    "cpu": "4",
+    "disk": "100",
+    "price": "12.00",
+    "currency": "eur",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "4",
+    "cpu": "2",
+    "disk": "80",
+    "price": "13.99",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Vultr",
+    "memory": "2",
+    "cpu": "2",
+    "disk": "65",
+    "price": "15.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Scaleway",
+    "memory": "4",
+    "cpu": "3",
+    "disk": "40",
+    "price": "14.49",
+    "currency": "eur",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "4",
+    "cpu": "4",
+    "disk": "80",
+    "price": "16.99",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "CloudFanatic",
+    "memory": "8",
+    "cpu": "8",
+    "disk": "200",
+    "price": "18.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "eVPS",
+    "memory": "10",
+    "cpu": "5",
+    "disk": "150",
+    "price": "17.00",
+    "currency": "eur",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Vultr",
+    "memory": "4",
+    "cpu": "2",
+    "disk": "80",
+    "price": "20.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "AWS Lightsail",
+    "memory": "4",
+    "cpu": "2",
+    "disk": "80",
+    "price": "24.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Linode",
+    "memory": "4",
+    "cpu": "2",
+    "disk": "80",
+    "price": "24.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Scaleway",
+    "memory": "8",
+    "cpu": "4",
+    "disk": "100",
+    "price": "23.49",
+    "currency": "eur",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "8",
+    "cpu": "2",
+    "disk": "160",
+    "price": "27.99",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "eVPS",
+    "memory": "14",
+    "cpu": "6",
+    "disk": "200",
+    "price": "25.00",
+    "currency": "eur",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "CloudFanatic",
+    "memory": "12",
+    "cpu": "8",
+    "disk": "400",
+    "price": "29.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "8",
+    "cpu": "4",
+    "disk": "160",
+    "price": "30.99",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "eVPS",
+    "memory": "18",
+    "cpu": "7",
+    "disk": "250",
+    "price": "30.00",
+    "currency": "eur",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "8",
+    "cpu": "8",
+    "disk": "160",
+    "price": "37.99",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "CloudFanatic",
+    "memory": "16",
+    "cpu": "12",
+    "disk": "500",
+    "price": "40.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Vultr",
+    "memory": "8",
+    "cpu": "4",
+    "disk": "160",
+    "price": "40.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "AWS Lightsail",
+    "memory": "8",
+    "cpu": "2",
+    "disk": "160",
+    "price": "44.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "eVPS",
+    "memory": "40",
+    "cpu": "10",
+    "disk": "300",
+    "price": "40.00",
+    "currency": "eur",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Linode",
+    "memory": "8",
+    "cpu": "4",
+    "disk": "160",
+    "price": "48.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Scaleway",
+    "memory": "16",
+    "cpu": "8",
+    "disk": "160",
+    "price": "46.99",
+    "currency": "eur",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "16",
+    "cpu": "4",
+    "disk": "320",
+    "price": "52.99",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "16",
+    "cpu": "8",
+    "disk": "320",
+    "price": "59.99",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "16",
+    "cpu": "16",
+    "disk": "320",
+    "price": "75.99",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "CloudFanatic",
+    "memory": "32",
+    "cpu": "16",
+    "disk": "1000",
+    "price": "77.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "eVPS",
+    "memory": "80",
+    "cpu": "16",
+    "disk": "400",
+    "price": "70.00",
+    "currency": "eur",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Vultr",
+    "memory": "16",
+    "cpu": "6",
+    "disk": "320",
+    "price": "80.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "AWS Lightsail",
+    "memory": "16",
+    "cpu": "4",
+    "disk": "320",
+    "price": "84.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Raff Technologies",
+    "memory": "24",
+    "cpu": "12",
+    "disk": "480",
+    "price": "90.99",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Linode",
+    "memory": "16",
+    "cpu": "6",
+    "disk": "320",
+    "price": "96.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Scaleway",
+    "memory": "32",
+    "cpu": "16",
+    "disk": "320",
+    "price": "89.99",
+    "currency": "eur",
+    "updated_at": "2026-10-06"
+  },
+  {
     "provider": "Raff Technologies",
     "memory": "32",
     "cpu": "8",
     "disk": "640",
     "price": "115.99",
     "currency": "usd",
-    "updated_at": "2026-08-16"
+    "updated_at": "2026-10-06"
   },
   {
     "provider": "Raff Technologies",
@@ -672,7 +672,7 @@
     "disk": "640",
     "price": "129.99",
     "currency": "usd",
-    "updated_at": "2026-08-16"
+    "updated_at": "2026-10-06"
   },
   {
     "provider": "CloudFanatic",
@@ -681,7 +681,7 @@
     "disk": "2000",
     "price": "157.00",
     "currency": "usd",
-    "updated_at": "2026-08-16"
+    "updated_at": "2026-10-06"
   },
   {
     "provider": "Vultr",
@@ -690,7 +690,7 @@
     "disk": "640",
     "price": "160.00",
     "currency": "usd",
-    "updated_at": "2026-08-16"
+    "updated_at": "2026-10-06"
   },
   {
     "provider": "AWS Lightsail",
@@ -699,7 +699,7 @@
     "disk": "640",
     "price": "164.00",
     "currency": "usd",
-    "updated_at": "2026-08-16"
+    "updated_at": "2026-10-06"
   },
   {
     "provider": "Linode",
@@ -708,7 +708,7 @@
     "disk": "640",
     "price": "192.00",
     "currency": "usd",
-    "updated_at": "2026-08-16"
+    "updated_at": "2026-10-06"
   },
   {
     "provider": "Vultr",
@@ -717,7 +717,7 @@
     "disk": "1280",
     "price": "320.00",
     "currency": "usd",
-    "updated_at": "2026-08-16"
+    "updated_at": "2026-10-06"
   },
   {
     "provider": "AWS Lightsail",
@@ -726,7 +726,7 @@
     "disk": "1280",
     "price": "384.00",
     "currency": "usd",
-    "updated_at": "2026-08-16"
+    "updated_at": "2026-10-06"
   },
   {
     "provider": "Linode",
@@ -735,6 +735,42 @@
     "disk": "1280",
     "price": "384.00",
     "currency": "usd",
-    "updated_at": "2026-08-16"
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Linode",
+    "memory": "96",
+    "cpu": "20",
+    "disk": "1920",
+    "price": "576.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Vultr",
+    "memory": "96",
+    "cpu": "24",
+    "disk": "1600",
+    "price": "640.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Linode",
+    "memory": "128",
+    "cpu": "24",
+    "disk": "2560",
+    "price": "768.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
+  },
+  {
+    "provider": "Linode",
+    "memory": "192",
+    "cpu": "32",
+    "disk": "3840",
+    "price": "1152.00",
+    "currency": "usd",
+    "updated_at": "2026-10-06"
   }
 ]
