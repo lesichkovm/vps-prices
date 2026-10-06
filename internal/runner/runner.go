@@ -13,6 +13,7 @@ import (
 	"time"
 
 	"github.com/lesichkovm/vps-prices/internal/fx"
+	"github.com/lesichkovm/vps-prices/internal/generator"
 	"github.com/lesichkovm/vps-prices/internal/model"
 	"github.com/lesichkovm/vps-prices/internal/providers"
 )
@@ -236,6 +237,12 @@ func RunUpdate(ctx context.Context, opts UpdateOptions) error {
 		slog.Info("Updating README.md FX section")
 		if err := fx.UpdateREADMERates("README.md", rates); err != nil {
 			slog.Error("Failed to update README FX rates", "error", err)
+		}
+
+		slog.Info("Pre-rendering index.html and sitemap.xml")
+		gen := generator.NewGenerator("data.json", "index.html", "sitemap.xml")
+		if err := gen.GenerateAll(rates); err != nil {
+			slog.Error("Failed pre-rendering index.html and sitemap.xml", "error", err)
 		}
 
 		// Update research notes for fetched providers

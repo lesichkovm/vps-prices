@@ -4,7 +4,7 @@
 
 A simple, interactive dashboard for comparing Virtual Private Server (VPS) prices, hardware specs (CPU, Memory, Disk), and price-to-performance across major cloud infrastructure providers.
 
-Live Web Application: [https://lesichkovm.github.io/vps-prices/](https://lesichkovm.github.io/vps-prices/)
+Live Web Application: [https://vpsprices.lesichkov.co.uk](https://vpsprices.lesichkov.co.uk)
 
 ## Goal
 
