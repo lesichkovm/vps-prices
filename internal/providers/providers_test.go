@@ -289,3 +289,29 @@ func TestKamateraProvider(t *testing.T) {
 		t.Fatalf("Expected 6 Kamatera plans, got %d", len(plans))
 	}
 }
+
+func TestVPSMartProvider(t *testing.T) {
+	fixture := getFixture(t, "vpsmart.html")
+
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/html")
+		_, _ = w.Write(fixture)
+	}))
+	defer server.Close()
+
+	client := NewHTTPClient(5 * time.Second)
+	provider := NewVPSMartProvider(client, server.URL)
+
+	plans, err := provider.Fetch(context.Background())
+	if err != nil {
+		t.Fatalf("VPSMart Fetch error: %v", err)
+	}
+
+	if len(plans) != 8 {
+		t.Fatalf("Expected 8 VPSMart plans, got %d", len(plans))
+	}
+
+	if plans[0].Provider != "VPSMart" || plans[0].Price != "2.88" {
+		t.Errorf("Unexpected VPSMart plan 0: %+v", plans[0])
+	}
+}
