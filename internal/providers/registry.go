@@ -25,6 +25,7 @@ func GetAllProviders(timeout time.Duration) []model.Provider {
 		NewRaffProvider(client, ""),
 		NewScalewayProvider(client, ""),
 		NewUpCloudProvider(client, ""),
+		NewVPSMartProvider(client, ""),
 		NewVultrProvider(client, ""),
 	}
 }

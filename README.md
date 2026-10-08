@@ -41,6 +41,7 @@ Below is the list of VPS hosting providers included in our comparison along with
 - [Raff Technologies](https://rafftechnologies.com/)
 - [Scaleway](https://www.scaleway.com/)
 - [UpCloud](https://upcloud.com/)
+- [VPSMart](https://www.vps-mart.com/pricing)
 - [Vultr](https://www.vultr.com/)
 
 Detailed research notes and data sources are maintained in the [`research/`](research/) directory.
