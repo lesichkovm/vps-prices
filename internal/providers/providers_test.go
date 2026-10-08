@@ -311,7 +311,7 @@ func TestVPSMartProvider(t *testing.T) {
 		t.Fatalf("Expected 8 VPSMart plans, got %d", len(plans))
 	}
 
-	if plans[0].Provider != "VPSMart" || plans[0].Price != "2.88" {
+	if plans[0].Provider != "VPSMart" || plans[0].Price != "5.88" {
 		t.Errorf("Unexpected VPSMart plan 0: %+v", plans[0])
 	}
 }

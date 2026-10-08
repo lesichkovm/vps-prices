@@ -202,7 +202,7 @@
     "memory": "4",
     "cpu": "2",
     "disk": "60",
-    "price": "2.88",
+    "price": "5.88",
     "currency": "usd",
     "updated_at": "2026-10-08"
   },
@@ -310,7 +310,7 @@
     "memory": "8",
     "cpu": "4",
     "disk": "140",
-    "price": "5.85",
+    "price": "12.72",
     "currency": "usd",
     "updated_at": "2026-10-08"
   },
@@ -454,7 +454,7 @@
     "memory": "18",
     "cpu": "8",
     "disk": "240",
-    "price": "10.80",
+    "price": "23.48",
     "currency": "usd",
     "updated_at": "2026-10-08"
   },
@@ -733,7 +733,7 @@
     "memory": "32",
     "cpu": "16",
     "disk": "400",
-    "price": "28.80",
+    "price": "62.61",
     "currency": "usd",
     "updated_at": "2026-10-08"
   },
