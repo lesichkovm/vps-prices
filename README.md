@@ -15,7 +15,7 @@ Choosing a VPS can be overwhelming due to varying specs, tier structures, and pr
 ### Currency Standardization
 
 <!-- FX-RATES:START -->
-To allow a fair, apples-to-apples comparison across all providers, all prices originally quoted in Euros (EUR) or British Pounds (GBP) are converted to US Dollars (USD). The exchange rates fetched on 2026-10-05 from European Central Bank are:
+To allow a fair, apples-to-apples comparison across all providers, all prices originally quoted in Euros (EUR) or British Pounds (GBP) are converted to US Dollars (USD). The exchange rates fetched on 2026-10-07 from European Central Bank are:
 
 - **1 EUR = 1.12 USD**
 - **1 GBP = 1.32 USD**
