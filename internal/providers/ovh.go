@@ -33,10 +33,10 @@ var defaultOVHPlans = []struct {
 	Disk   string
 	Price  float64
 }{
-	{"VPS-1", "2", "4", "40", 3.44},
-	{"VPS-2", "4", "8", "75", 6.44},
-	{"VPS-3", "6", "12", "100", 9.33},
-	{"VPS-4", "8", "24", "200", 17.70},
+	{"VPS-1", "2", "4", "40", 3.31},
+	{"VPS-2", "4", "8", "75", 6.29},
+	{"VPS-3", "6", "12", "100", 9.01},
+	{"VPS-4", "8", "24", "200", 17.34},
 }
 
 func (p *OVHProvider) Fetch(ctx context.Context) ([]model.Plan, error) {
@@ -46,14 +46,26 @@ func (p *OVHProvider) Fetch(ctx context.Context) ([]model.Plan, error) {
 	}
 
 	html := string(body)
-	rePrices := regexp.MustCompile(`£(\d+\.\d+)`)
-	matches := rePrices.FindAllStringSubmatch(html, -1)
 
-	extractedPrices := make([]float64, 0)
-	for _, m := range matches {
+	modelPrices := make(map[string]float64)
+	reModel := regexp.MustCompile(`data-product-id="vps-model-(\d+)"[\s\S]*?tax-excluded-price[\s\S]*?£(\d+\.\d+)`)
+	modelMatches := reModel.FindAllStringSubmatch(html, -1)
+	for _, m := range modelMatches {
+		if len(m) == 3 {
+			num := m[1]
+			if val, err := strconv.ParseFloat(m[2], 64); err == nil && val > 0 {
+				modelPrices["VPS-"+num] = val
+			}
+		}
+	}
+
+	reTaxEx := regexp.MustCompile(`tax-excluded-price[\s\S]*?£(\d+\.\d+)`)
+	taxExMatches := reTaxEx.FindAllStringSubmatch(html, -1)
+	var fallbackTaxExPrices []float64
+	for _, m := range taxExMatches {
 		if len(m) == 2 {
 			if val, err := strconv.ParseFloat(m[1], 64); err == nil && val > 0 {
-				extractedPrices = append(extractedPrices, val)
+				fallbackTaxExPrices = append(fallbackTaxExPrices, val)
 			}
 		}
 	}
@@ -61,8 +73,10 @@ func (p *OVHProvider) Fetch(ctx context.Context) ([]model.Plan, error) {
 	var plans []model.Plan
 	for i, def := range defaultOVHPlans {
 		price := def.Price
-		if i < len(extractedPrices) {
-			price = extractedPrices[i]
+		if pVal, ok := modelPrices[def.PlanID]; ok {
+			price = pVal
+		} else if i < len(fallbackTaxExPrices) {
+			price = fallbackTaxExPrices[i]
 		}
 
 		plans = append(plans, model.Plan{
