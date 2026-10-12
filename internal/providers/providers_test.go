@@ -315,3 +315,43 @@ func TestVPSMartProvider(t *testing.T) {
 		t.Errorf("Unexpected VPSMart plan 0: %+v", plans[0])
 	}
 }
+
+func TestOVHProvider(t *testing.T) {
+	fixture := getFixture(t, "ovh_vps.html")
+
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/html")
+		_, _ = w.Write(fixture)
+	}))
+	defer server.Close()
+
+	client := NewHTTPClient(5 * time.Second)
+	provider := NewOVHProvider(client, server.URL)
+
+	plans, err := provider.Fetch(context.Background())
+	if err != nil {
+		t.Fatalf("OVH Fetch error: %v", err)
+	}
+
+	if len(plans) != 4 {
+		t.Fatalf("Expected 4 OVH plans, got %d", len(plans))
+	}
+
+	expectedPrices := map[string]string{
+		"VPS-1": "3.31",
+		"VPS-2": "6.29",
+		"VPS-3": "9.01",
+		"VPS-4": "17.34",
+	}
+
+	for _, p := range plans {
+		expectedPrice, ok := expectedPrices[p.PlanID]
+		if !ok {
+			t.Errorf("Unexpected plan ID: %s", p.PlanID)
+			continue
+		}
+		if p.Price != expectedPrice {
+			t.Errorf("Plan %s expected price %s, got %s", p.PlanID, expectedPrice, p.Price)
+		}
+	}
+}
